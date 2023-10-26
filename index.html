@@ -5,8 +5,15 @@
         <title>Webpack App</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
+        <form action="" class="form">
+            <label for="user-name">Имя: <input type="text" id="user-name" name="user-name"></label>
+            <label for="user-email">Email: <input type="email" id="user-email" name="user-email"></label>
+            <label for="user-phone">Телефон: <input type="text" id="user-phone" name="user-phone"></label>
+            <label for="user-message">Сообщение: <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea></label>
+            <button type="submit">Отправить</button>
+        </form>
+        <p class="message success" style="display: none">Success</p>
+        <p class="message error" style="display: none">Error</p>
     </body>
     
 </html>
