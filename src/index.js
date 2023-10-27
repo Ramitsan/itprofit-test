@@ -1,9 +1,12 @@
+import { isValidForm } from './js/validate';
+import './scss/style.scss';
+
 const baseUrl = 'http://localhost:9090/api';
 const REQUEST_STATUS_OK = 200;
 const REQUEST_STATUS_BAD = 400;
 const form = document.querySelector('.form');
-const successMessage = document.querySelector('.success');
-const errorMessage = document.querySelector('.error');
+const successMessage = document.querySelector('.message--success');
+const errorMessage = document.querySelector('.message--error');
 
 fetch(`${baseUrl}/ping`, {
   method: 'GET', 
@@ -14,6 +17,7 @@ fetch(`${baseUrl}/ping`, {
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
+  isValidForm();
   fetch(`${baseUrl}/registration`, {
     method: 'POST', 
     body: JSON.stringify({})
