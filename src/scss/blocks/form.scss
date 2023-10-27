@@ -1,0 +1,17 @@
+.form {
+  margin: auto;  
+  width: 50%;
+  max-width: 680px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: $primary-color;
+}
+
+.form__wrapper {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

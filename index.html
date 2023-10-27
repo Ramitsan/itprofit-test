@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Webpack App</title>
-    </head>
-    <body>
-        <form action="" class="form">
-            <label for="user-name">Имя: <input type="text" id="user-name" name="user-name"></label>
-            <label for="user-email">Email: <input type="email" id="user-email" name="user-email"></label>
-            <label for="user-phone">Телефон: <input type="text" id="user-phone" name="user-phone"></label>
-            <label for="user-message">Сообщение: <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea></label>
-            <button type="submit">Отправить</button>
-        </form>
-        <p class="message success" style="display: none">Success</p>
-        <p class="message error" style="display: none">Error</p>
-    </body>
-    
+
+<head>
+    <meta charset="utf-8" />
+    <title>Itprofit test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <form action="" class="form" method="POST" autocomplete="off" novalidate>
+        <div class="form__wrapper">
+            <div class="input-wrapper input-wrapper__user-name">
+                <label for="user-name" class="label">Имя: </label><input type="text" id="user-name" name="user-name" placeholder="Введите имя" required>
+            </div>
+            <div class="input-wrapper input-wrapper__user-email">
+                <label for="user-email" class="label">Email: </label><input type="email" id="user-email" name="user-email" placeholder="Введите email" required>
+            </div>
+            <div class="input-wrapper input-wrapper__user-phone">
+                <label for="user-phone" class="label">Телефон: </label><input type="text" id="user-phone" name="user-phone" placeholder="Введите телефон" required>
+            </div>
+            <div class="input-wrapper input-wrapper__user-message" class="label">
+                <label for="user-message">Сообщение: </label><textarea name="user-message" id="user-message" cols="30" rows="10" placeholder="Оставьте сообщение" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn--submit">Отправить</button>
+        </div>
+    </form>
+    <p class="message message--success" style="display: none">Success</p>
+    <p class="message message--error" style="display: none">Error</p>
+</body>
+
 </html>

@@ -1,0 +1,16 @@
+.btn {
+  border: 1px solid transparent;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.btn--submit {
+  width: 200px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: $tertiary-color;
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 3px;
+}

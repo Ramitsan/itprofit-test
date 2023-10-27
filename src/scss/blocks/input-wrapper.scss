@@ -1,0 +1,35 @@
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper label {
+  display: inline-block;
+  width: 18%;
+  color: $tertiary-color;
+  font-weight: bold;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 55%;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  color: $secondary-color;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+  outline: 0;
+  border: 2px solid $tertiary-color;
+  box-shadow: 0px 0px 5px $tertiary-color;
+  color: $primary-color;
+}
