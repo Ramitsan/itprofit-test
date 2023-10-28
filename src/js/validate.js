@@ -78,10 +78,10 @@ const isValidMessage = () => {
 export const isValidForm = () => {
   let valid = true;
   removeErrorMessages();
-  valid &&= isValidMail();
-  valid &&= isValidName();
-  valid &&= isValidPhone();
-  valid &&= isValidMessage();
+  valid = isValidMail() && valid;
+  valid = isValidName() && valid;
+  valid = isValidPhone() && valid;
+  valid = isValidMessage() && valid;
   return valid;
 }
 

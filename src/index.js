@@ -34,7 +34,6 @@ form.addEventListener('submit', (evt) => {
     });
   })
   .then(response => {
-    console.log(response);
     switch (response.status) {
       case REQUEST_STATUS_OK:
         onLoad(response.data);
@@ -42,8 +41,6 @@ form.addEventListener('submit', (evt) => {
       case REQUEST_STATUS_BAD:
         onError(response.data);
         break;
-      default:
-       console.log(response);
     }
   });
 })
@@ -51,11 +48,13 @@ form.addEventListener('submit', (evt) => {
 const onLoad = (data) => {
   fields.forEach(field => field.value = '');
   textarea.value = '';
-  successMessage.style.display = '';
+  successMessage.textContent = data.message;
+  successMessage.classList.add('message-show');
   errorMessage.style.display = 'none';
 }
 
 const onError = (data) => {
-  successMessage.style.display = 'none';
+  errorMessage.textContent = data.message;
+  errorMessage.classList.add('message-show');
   errorMessage.style.display = '';
 }
