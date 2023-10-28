@@ -5,6 +5,8 @@ const baseUrl = 'http://localhost:9090/api';
 const REQUEST_STATUS_OK = 200;
 const REQUEST_STATUS_BAD = 400;
 const form = document.querySelector('.form');
+const fields = form.querySelectorAll('input');
+const textarea = form.querySelector('textarea');
 const successMessage = document.querySelector('.message--success');
 const errorMessage = document.querySelector('.message--error');
 
@@ -17,7 +19,8 @@ fetch(`${baseUrl}/ping`, {
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  isValidForm();
+  const validRes = isValidForm();
+  if(!validRes) return;
   fetch(`${baseUrl}/registration`, {
     method: 'POST', 
     body: JSON.stringify({})
@@ -46,6 +49,8 @@ form.addEventListener('submit', (evt) => {
 })
 
 const onLoad = (data) => {
+  fields.forEach(field => field.value = '');
+  textarea.value = '';
   successMessage.style.display = '';
   errorMessage.style.display = 'none';
 }

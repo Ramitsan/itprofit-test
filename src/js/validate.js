@@ -41,10 +41,12 @@ const isValidMail = () => {
 }
 
 const isValidName = () => {
-  if(!inputName.value) {
+  const valid = !!inputName.value;
+  if(!valid) {
     createErrorMessage(nameWrapper, 'Введите имя');
     inputName.style.border = '2px solid #f00';
   }
+  return valid;
 }
 
 const isValidPhone = () => {
@@ -65,18 +67,22 @@ const isValidPhone = () => {
 }
 
 const isValidMessage = () => {
-  if(!inputMessage.value) {
+  const valid = !!inputMessage.value;
+  if(!valid) {
     createErrorMessage(messageWrapper, 'Напишите сообщение');
     inputMessage.style.border = '2px solid #f00';
   }
+  return valid;
 }
 
 export const isValidForm = () => {
+  let valid = true;
   removeErrorMessages();
-  isValidMail();
-  isValidName();
-  isValidPhone();
-  isValidMessage();
+  valid &&= isValidMail();
+  valid &&= isValidName();
+  valid &&= isValidPhone();
+  valid &&= isValidMessage();
+  return valid;
 }
 
 
