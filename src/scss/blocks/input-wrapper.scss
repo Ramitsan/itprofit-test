@@ -1,24 +1,32 @@
 .input-wrapper {
   width: 100%;
   display: flex;
-  margin: 14px 0;
+  margin: 10px 0;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
 }
 
 .input-wrapper label {
   display: inline-block;
-  width: 18%;
+  width: 25%;
   color: $tertiary-color;
   font-weight: bold;
 }
 
 .input-wrapper input,
 .input-wrapper textarea {
-  width: 55%;
+  width: 60%;
   padding: 10px;
   border: 2px solid transparent;
   border-radius: 5px;
+}
+
+.input-wrapper__user-name, 
+.input-wrapper__user-email, 
+.input-wrapper__user-phone, 
+.input-wrapper__user-message {
+  position: relative;
 }
 
 .input-wrapper input::placeholder,
@@ -32,4 +40,14 @@
   border: 2px solid $tertiary-color;
   box-shadow: 0px 0px 5px $tertiary-color;
   color: $primary-color;
+}
+
+.input-wrapper__user-name p,
+.input-wrapper__user-email p,
+.input-wrapper__user-phone p,
+.input-wrapper__user-message p {
+  position: absolute;
+  bottom: -40px;
+  left: 25%;
+  font-size: 16px;
 }
