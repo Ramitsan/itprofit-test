@@ -1,4 +1,5 @@
 import { isValidForm } from './js/validate';
+import { modalOpen} from './js/modal';
 import './scss/style.scss';
 
 const baseUrl = 'http://localhost:9090/api';
@@ -9,6 +10,7 @@ const fields = form.querySelectorAll('input');
 const textarea = form.querySelector('textarea');
 const successMessage = document.querySelector('.message--success');
 const errorMessage = document.querySelector('.message--error');
+const modalButton = document.querySelector('.btn--modal');
 
 fetch(`${baseUrl}/ping`, {
   method: 'GET', 
@@ -58,3 +60,5 @@ const onError = (data) => {
   errorMessage.classList.add('message-show');
   errorMessage.style.display = '';
 }
+
+modalButton.addEventListener('click', modalOpen);
