@@ -16,7 +16,7 @@
 
 .input-wrapper input,
 .input-wrapper textarea {
-  width: 60%;
+  width: 65%;
   padding: 10px;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -50,4 +50,39 @@
   bottom: -40px;
   left: 25%;
   font-size: 16px;
+}
+
+@media (max-width: $tablet-width) {
+  .input-wrapper input,
+  .input-wrapper textarea {
+    width: 70%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .input-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .input-wrapper label {
+    width: 25%;
+    margin-bottom: 10px;
+  }
+
+  .input-wrapper input,
+  .input-wrapper textarea {
+    width: 100%;
+  }
+
+  .input-wrapper__user-name p, 
+  .input-wrapper__user-email p, 
+  .input-wrapper__user-phone p, 
+  .input-wrapper__user-message p {
+    width: 200px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
