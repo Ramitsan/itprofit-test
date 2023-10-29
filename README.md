@@ -1,15 +1,9 @@
-# 🚀 Welcome to your new awesome project!
+### Тестовое задание на позицию Frontend developer (ES/TS/React)
 
-This project has been created using **webpack-cli**, you can now run
+![скрин](https://github.com/Ramitsan/itprofit-test/assets/45296707/a7be8e50-ab3d-4499-9732-dbdc66a8c38c)
 
-```
-npm run build
-```
+Запуск проекта в режиме разработки **npm start**
 
-or
+Запуск локального сервера **npm run server**
 
-```
-yarn build
-```
-
-to bundle your application
+Сборка билда **npm run build**
