@@ -12,7 +12,16 @@
   color: $primary-color;
   font-size: 18px;
   font-weight: bold;
+  border: 2px solid $tertiary-color;
   border-radius: 3px;
+  transition: all .3s;
+  &:focus,
+  &:hover {
+    @include btn-hover();
+  }
+  &:active {
+    @include btn-active();
+  }
 }
 
 .btn--modal {
@@ -25,7 +34,16 @@
   color: $primary-color;
   font-size: 18px;
   font-weight: bold;
+  border: 2px solid $tertiary-color;
   border-radius: 3px;
+  transition: all .3s;
+  &:focus,
+  &:hover {
+    @include btn-hover();
+  }
+  &:active {
+    @include btn-active();
+  }
 }
 
 .btn--modal-close {
